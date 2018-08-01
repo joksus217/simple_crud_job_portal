@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "f5d81f79-4991-4f16-ba13-166227727584",
+		"name": "Job Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Proposal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzEzMTU2NjYsIm5iZiI6MTUzMTMxMjA2NiwiaWQiOjN9.TrwpQTsby0zokTKTK2OCYFMq0QCWTp8qEJm447Q20BE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://homestead.test/v1/job/1/proposal",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"v1",
+						"job",
+						"1",
+						"proposal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proposal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MzEzMTU0NDgsIm5iZiI6MTUzMTMxMTg0OCwiaWQiOjF9.dkkK2t2kUxR-e9axyIfqvz6gMRwYqNsnN8iz8P0dFkc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"budget\" : 50,\n    \"estimation_date\" : 5,\n    \"summary\" : \"Lorem ipsum\"\t\n}"
+				},
+				"url": {
+					"raw": "http://homestead.test/v1/job/60/proposal",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"v1",
+						"job",
+						"60",
+						"proposal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Basic",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ben_brode",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://homestead.test/v1/auth",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
